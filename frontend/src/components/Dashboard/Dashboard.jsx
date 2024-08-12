@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import TopSales from '../TopSales/TopSales';
 import TopSuppliers from '../TopSuppliers/TopSuppliers';
 import ProductLookup from '../ProductLookup/ProductLookup';
+import PurchaseOrders from '../PurchaseOrders/PurchaseOrders';
 import Inventory from '../Inventory/Inventory';
 import "./Dashboard.scss"
 
 const Dashboard = () => {
-  const [topProducts, setTopProducts] = useState([]);
+  const [orders, setOrders] = useState([]);
   const [companies, setCompanies] = useState([]);
   const [lowStockProducts, setLowStockProducts] = useState([]);
-  const [products, setProducts] = useState({});
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     // Fetch top products, companies, and low stock products from your Rails API
     fetch('http://localhost:3000/api/v1/dashboard')
       .then((response) => response.json())
       .then((data) => { 
-        console.log('data.products_with_ingredients:', data.products_with_ingredients)
-        setTopProducts(data.topProducts)
+        setOrders(data.purchase_order_data)
         setCompanies(data.companies)
         setLowStockProducts(data.low_stock_products)
         setProducts(data.products_with_ingredients)
@@ -37,12 +38,12 @@ const Dashboard = () => {
             <ProductLookup products={products} />
           </div>
           <div className="widget">
-            Top Sales
+            <TopSales products={products} />
           </div>
         </div>
         <div className="row">
           <div className="widget large-widget">
-            Purchase Orders
+            <PurchaseOrders orders={orders} />
           </div>
           <div className="widget">
             <Inventory lowStockProducts={lowStockProducts} />

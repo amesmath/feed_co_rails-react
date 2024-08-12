@@ -8,14 +8,10 @@ const ProductLookup = ({ products }) => {
   const [visibleInfo, setVisibleInfo] = useState({});
 
   const toggleAdditionalInfo = (sku) => {
-    console.log('sku:', sku)
     setVisibleInfo((prevVisibleInfo) => ({
       ...prevVisibleInfo,
       [sku]: !prevVisibleInfo[sku],
     }));
-
-
-    console.log('visibleInfo:', visibleInfo)
   };
 
   const handleInputChange = (event) => {
