@@ -8,6 +8,7 @@ const Dashboard = () => {
   const [topProducts, setTopProducts] = useState([]);
   const [companies, setCompanies] = useState([]);
   const [lowStockProducts, setLowStockProducts] = useState([]);
+  const [products, setProducts] = useState({});
 
   useEffect(() => {
     // Fetch top products, companies, and low stock products from your Rails API
@@ -17,6 +18,7 @@ const Dashboard = () => {
         setTopProducts(data.topProducts)
         setCompanies(data.companies)
         setLowStockProducts(data.low_stock_products)
+        setProducts(data.products_with_ingredients)
       });
   }, []);
 
@@ -31,7 +33,7 @@ const Dashboard = () => {
             <TopSuppliers companies={companies} />
           </div>
           <div className="widget">
-            <ProductLookup />
+            <ProductLookup products={products} />
           </div>
           <div className="widget">
             Top Sales

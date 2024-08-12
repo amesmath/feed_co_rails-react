@@ -22,4 +22,55 @@
         border-radius: 7px;
         margin: 22px;
     }
+
+    .company-link {
+        color: #6595b6;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .company-link:hover {
+        color: rgb(72, 114, 142);
+    }
+    
+    .additional-info {
+        display: none;
+        background: #fcfcfc;
+        border-top: 1px solid rgb(229, 229, 229);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        height: 70px;
+        margin: 0;
+        font-size: 14px;
+        margin-top: 15px !important;
+        text-align: left;
+        padding: 18px 0px 3px 12px;
+    }
+    
+    .additional-info p {
+        margin: 7px 0 0 12px;
+    }
+    
+    .ingredient-item {
+        padding: 0;
+    }
+    
+    .ingredient-item div {
+        margin: 0;
+    }
+    
+    .ingredient-item .ingredient-header {
+        padding: 25px 15px 2px;
+        margin-bottom: 28px;
+    }
+    
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-button {
+        margin-top: 10px;
+    } 
 }
