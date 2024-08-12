@@ -6,16 +6,19 @@ const TopSuppliers = ({ companies }) => {
     Highcharts.chart('companies_pie_chart', {
       chart: {
         type: 'pie',
+        height: 530
       },
       title: {
         text: 'Top Suppliers',
       },
       plotOptions: {
         pie: {
+          size: '270px',
           dataLabels: {
             enabled: false,
           },
           showInLegend: true,
+          center: ['50%', '50%'],
         },
       },
       tooltip: {

@@ -29,6 +29,11 @@
         overflow-y: scroll;
     }
 
+    .results-container {
+        height: 430px;
+        width: 370px;
+    }
+
     .company-link {
         color: #6595b6;
         text-decoration: none;
@@ -44,7 +49,6 @@
     }
     
     .additional-info {
-        display: none;
         background: #fcfcfc;
         border-top: 1px solid rgb(229, 229, 229);
         border-top-left-radius: 0;
