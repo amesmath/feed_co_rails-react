@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Inventory.scss"
 
 const Inventory = ({ lowStockProducts }) => {
   return (

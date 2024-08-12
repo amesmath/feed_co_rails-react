@@ -55,7 +55,7 @@ const ProductLookup = () => {
             </div>
           ))
         ) : (
-          <div className="ingredient-item">No results found</div>
+          <div className="ingredient-item"></div>
         )}
       </div>
     </div>
