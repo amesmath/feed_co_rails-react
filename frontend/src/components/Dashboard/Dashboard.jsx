@@ -15,6 +15,7 @@ const Dashboard = () => {
     fetch('http://localhost:3000/api/v1/dashboard')
       .then((response) => response.json())
       .then((data) => { 
+        console.log('data.products_with_ingredients:', data.products_with_ingredients)
         setTopProducts(data.topProducts)
         setCompanies(data.companies)
         setLowStockProducts(data.low_stock_products)

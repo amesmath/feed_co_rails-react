@@ -18,7 +18,11 @@ module Api
           purchase_order_data: @purchase_order_data,
           companies: @companies.as_json,
           low_stock_products: @low_stock_products.as_json,
-          products_with_ingredients: @products_with_ingredients.as_json,
+          products_with_ingredients: @products_with_ingredients.as_json(include: {
+                                                                          ingredients: { include: { supplier_product: { only: %i[
+                                                                            name id price
+                                                                          ] } } }
+                                                                        }),
           top_products: @top_products.as_json
         }, status: :ok
       end

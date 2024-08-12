@@ -69,7 +69,7 @@ const ProductLookup = ({ products }) => {
                     <div className="ingredient-header">
                       <div>{ingredient.supplier_product.name}</div>
                       <div>
-                        <i>Supplier</i>: <a className="company-link">{ingredient.supplier_product.company.company_name}</a>
+                        <i>Supplier</i>: <a className="company-link">{ingredient.supplier_product.name}</a>
                       </div>
                     </div>
                     <div className="additional-info">

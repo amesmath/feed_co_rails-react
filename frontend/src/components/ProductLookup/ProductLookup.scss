@@ -13,6 +13,11 @@
             border: none;
             margin-left: 10px;
             background: #f2f2f2;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #e0e0e0;
+            }
         }
     }
 
@@ -21,6 +26,7 @@
         border: 1px solid lightgrey;
         border-radius: 7px;
         margin: 22px;
+        overflow-y: scroll;
     }
 
     .company-link {
@@ -31,6 +37,10 @@
     
     .company-link:hover {
         color: rgb(72, 114, 142);
+    }
+
+    .ingredient-item-group {
+        padding: 30px 10px;
     }
     
     .additional-info {
@@ -61,7 +71,6 @@
     
     .ingredient-item .ingredient-header {
         padding: 25px 15px 2px;
-        margin-bottom: 28px;
     }
     
     .search-container {
@@ -80,7 +89,7 @@
         }
 
         .typeahead-options {
-            top: 36px;
+            top: 46px;
             left: calc(50% - 170px);
             position: absolute;
             background: #fff;
