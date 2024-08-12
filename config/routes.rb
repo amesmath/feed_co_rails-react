@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Default all routes to JSON format
-  scope format: true, constraints: { format: :json } do
+  scope constraints: { format: :json } do
     namespace :api do
       namespace :v1 do
         devise_for :users, controllers: {
