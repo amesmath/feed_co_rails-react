@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./ProductLookup.scss";
 
 const ProductLookup = () => {
   const [query, setQuery] = useState('');
@@ -17,8 +18,9 @@ const ProductLookup = () => {
     }).format(value);
 
   return (
-    <div>
-      <div id="search-container">
+    <div className="product-lookup">
+      <h3>Product Lookup</h3>
+      <div className="search-container">
         <input
           type="text"
           id="product-search"
@@ -26,7 +28,7 @@ const ProductLookup = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button id="search-button" onClick={handleSearch}>
+        <button className="search-button" onClick={handleSearch}>
           Search
         </button>
       </div>
