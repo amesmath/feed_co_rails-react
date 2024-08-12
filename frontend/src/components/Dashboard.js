@@ -10,17 +10,13 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Fetch top products, companies, and low stock products from your Rails API
-    fetch('/api/v1/top_products')
+    fetch('http://localhost:3000/api/v1/dashboard')
       .then((response) => response.json())
-      .then((data) => setTopProducts(data));
-
-    fetch('/api/v1/companies')
-      .then((response) => response.json())
-      .then((data) => setCompanies(data));
-
-    fetch('/api/v1/low_stock_products')
-      .then((response) => response.json())
-      .then((data) => setLowStockProducts(data));
+      .then((data) => { 
+        setTopProducts(data.topProducts)
+        setCompanies(data.companies)
+        setLowStockProducts(data.low_stock_products)
+      });
   }, []);
 
   return (
