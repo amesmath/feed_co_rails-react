@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import TopSuppliers from './TopSuppliers';
-import ProductLookup from './ProductLookup';
-import Inventory from './Inventory';
+import TopSuppliers from '../TopSuppliers/TopSuppliers';
+import ProductLookup from '../ProductLookup/ProductLookup';
+import Inventory from '../Inventory/Inventory';
+import "./Dashboard.scss"
 
 const Dashboard = () => {
   const [topProducts, setTopProducts] = useState([]);
@@ -25,9 +26,25 @@ const Dashboard = () => {
         <h1>FeedCo</h1>
       </header>
       <div className="dashboard-content">
-        <TopSuppliers companies={companies} />
-        <ProductLookup />
-        <Inventory lowStockProducts={lowStockProducts} />
+        <div className="row">
+          <div className="widget">
+            <TopSuppliers companies={companies} />
+          </div>
+          <div className="widget">
+            <ProductLookup />
+          </div>
+          <div className="widget">
+            Top Sales
+          </div>
+        </div>
+        <div className="row">
+          <div className="widget large-widget">
+            Purchase Orders
+          </div>
+          <div className="widget">
+            <Inventory lowStockProducts={lowStockProducts} />
+          </div>
+        </div>
       </div>
     </div>
   );
