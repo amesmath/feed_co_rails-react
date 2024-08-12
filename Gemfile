@@ -21,6 +21,9 @@ gem 'dotenv-rails', groups: %i[development test]
 # For API integration
 gem 'httparty'
 
+# For Devise API mode
+gem 'devise-jwt'
+
 # JSON builder for APIs
 gem 'jbuilder'
 

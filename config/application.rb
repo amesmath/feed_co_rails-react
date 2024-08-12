@@ -7,8 +7,8 @@ require 'active_record/railtie'
 require 'action_controller/railtie'
 require 'action_mailer/railtie'
 require 'rails/test_unit/railtie'
-require 'sprockets/railtie' # You can remove this if you're not using it.
-# require "action_cable/engine" # You can remove this if you're not using it.
+# require 'sprockets/railtie' # Remove this since you're not using it
+# require 'action_cable/engine' # Uncomment if you're using Action Cable
 
 Bundler.require(*Rails.groups)
 
