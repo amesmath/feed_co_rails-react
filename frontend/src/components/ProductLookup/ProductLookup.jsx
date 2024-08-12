@@ -51,7 +51,7 @@ const ProductLookup = ({ products }) => {
         {options.length > 0 && (
           <div className="typeahead-options">
             {options.map((productName, index) => (
-              <div key={index} onClick={() => handleSelection(productName)}>
+              <div className="typeahead-option" key={index} onClick={() => handleSelection(productName)}>
                 {productName}
               </div>
             ))}

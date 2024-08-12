@@ -66,11 +66,40 @@
     
     .search-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        input {
+            padding: 10px;
+            border: 1px solid #bbb8b8;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        .typeahead-options {
+            top: 36px;
+            left: calc(50% - 170px);
+            position: absolute;
+            background: #fff;
+            height: 200px;
+            width: 242px;
+            padding: 20px;
+            overflow-y: scroll;
+            border: 1px solid #bbb8b8;
+            border-radius: 4px;
+
+            .typeahead-option {
+                width: 100%;
+                padding: 7px 0;
+                border-radius: 5px;
+                &:hover {
+                    cursor: pointer;
+                    background-color: #ececec;
+                }
+            }
+        }
     }
-    
-    .search-button {
-        margin-top: 10px;
-    } 
 }
