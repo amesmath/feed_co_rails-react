@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Highcharts from 'highcharts';
 
 const PurchaseOrders = ({ orders }) => {
-    console.log('orders:', orders)
   useEffect(() => {
     Highcharts.chart('purchase-orders-chart', {
       chart: {
